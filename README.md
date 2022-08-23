@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# Test Task Client-Side
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Video showing how the app works
 
-## Available Scripts
+https://drive.google.com/drive/folders/1AEuEJbHRHujgl828_7YU4PxbFcU6kp1I?usp=sharing
 
-In the project directory, you can run:
+### Describe
 
-### `npm start`
+Depending on the role you are applying for, please create an iOS, Android or React app using
+the following requirements:
+● Latest Swift on iOS, Kotlin on Android or TypeScript on React
+● On main screen app shows list of people by listing only the first name
+● On tapping on a list item show the profile view that displays: first name, last name, age,
+gender and country
+● Architect your code with care as we'll inspect for style and clean it is
+● Make sure you write clean, beautiful code
+● Make sure you write defensive code
+● Make sure you have unit tests defined
+● Handle service errors gracefully
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+● API calls must use JWT authorization bearer using HMAC 256 and base64-encoded
+secret: "$SECRET$"
+● Example of JWT token that works:
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiIxMjMiLCJpZGVudGl0eSI6IjEyMzQifQ.y
+OIx1ZozHSMy_ZndEEMXIH0YeGUkHH3idl_2WTI12gs
+● The JWT payload should include an object with two properties "uid" and "identity" with
+any values
+● API domain: http://opn-interview-service.nn.r.appspot.com
+● API call for listing of people ids: GET: /list
+● API call for getting Detailed Profile: GET: /get/{id} where {id} is the id of the profile you
+get back from the list.
 
-### `npm test`
+### GitHub
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+● Upload completed test task to your own GitHub repository.
+● Update README.md file with some description of the test task and video showing how
+the app works.
