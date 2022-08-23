@@ -15,7 +15,7 @@ interface UserItemProps {
 }
 
 const UserItem: FC<UserItemProps> = ({ id }) => {
-	const [user, setUser] = useState<IUser>();
+	const [user, setUser] = useState<IUser | null>(null);
 	const [openProfile, setOpenProfile] = useState<boolean>(false);
 
 	useEffect(() => {
@@ -33,14 +33,16 @@ const UserItem: FC<UserItemProps> = ({ id }) => {
 		}
 	}
 
+	const handleOpen = () => setOpenProfile(true);
+
 	return (
-		<div>
+		<div data-testid='user-item'>
 			{user && (
 				<>
-					<ListItem disablePadding>
-						<ListItemButton onClick={() => setOpenProfile(true)}>
+					<ListItem disablePadding >
+						<ListItemButton onClick={handleOpen}>
 							<ListItemIcon>
-								<PersonIcon fontSize='large' />
+								<PersonIcon fontSize='large'/>
 							</ListItemIcon>
 							<ListItemText primary={user.firstName} />
 						</ListItemButton>

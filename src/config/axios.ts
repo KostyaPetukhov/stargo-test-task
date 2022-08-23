@@ -5,7 +5,7 @@ const jwtToken =
 
 const apiClient = axios.create({
 	baseURL: 'http://opn-interview-service.nn.r.appspot.com',
-	// responseType: 'json',
+	responseType: 'json',
 });
 
 apiClient.interceptors.request.use((config) => {
